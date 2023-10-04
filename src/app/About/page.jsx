@@ -4,7 +4,7 @@ const Aboutus = () => {
     <main className="w-full h-auto  bg-white p-[1rem]" id="Aboutus">
       <div className="h-full p-2 " >
       
-        <div>
+        <div classname="p-[1rem]" >
           <div className="text-3xl  text-[#173b6c]  " >About
             <div className="h-1 w-[7rem] mt-[0.50rem] mb-2 bg-[#149ddd]" >
             </div>
