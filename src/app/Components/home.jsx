@@ -7,6 +7,7 @@ const Home = () => {
 
   return (
     <div className="overflow-hidden">
+      <title>My portfolio</title>
       <div className="relative">
         <Image className="w-full h-full opacity-50" src="/bgs.jpg" width="500" height="500" alt="" />
       </div>
