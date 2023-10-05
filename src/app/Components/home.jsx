@@ -11,7 +11,7 @@ const Home = () => {
   const [active, setActive] = useState(false);
 
   return (
-    <div className="w-screen xl:w-full ">
+    <div className="w-screen xl:h-full xl:w-full ">
 
 
       <title>My portfolio</title>
@@ -36,7 +36,7 @@ const Home = () => {
         </button>
 
 
-        <Image className="w-full h-full opacity-50 sm:w-full xl:w-full" src="/bgs.jpg" width="500" height="500" alt="" />
+        <Image className="w-full h-full opacity-50 xl:h-screen sm:w-full xl:w-full" src="/bgs.jpg" width="500" height="500" alt="" />
       </div>
       <div className=" absolute  xl:left-[34rem] xl:top-[34rem] md:left-[5rem] top-0  md:top-[3rem] lg:top-[15rem] text-[1rem] md:text-4xl lg:text-5xl">
 
