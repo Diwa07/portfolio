@@ -1,3 +1,4 @@
+
 import Image from "next/image"
 import Link from "next/link"
 import { FaSquareTwitter, FaInstagram, FaBook } from 'react-icons/fa6'
@@ -7,8 +8,9 @@ import { IoMdContacts } from 'react-icons/io'
 import { MdMiscellaneousServices, MdOutlinePeopleAlt } from 'react-icons/md'
 
 const Header = () => {
+   
     return (
-        <nav className=" bg-[#273644] w-[23%] h-screen fixed   grid grid-rows-2 text-[white]" >
+        <nav className=" bg-[#273644] w-[23%] h-screen fixed  invisible xl:visible grid grid-rows-2 text-[white]" >
 
             <div className="flex flex-col items-center justify-center ">
                 <div className="h-[15rem] rounded-full overflow-hidden  w-[15rem] bg-red  border-[#dad8d8] border-[7px] ">

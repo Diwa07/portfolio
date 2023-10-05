@@ -1,7 +1,7 @@
 import Image from "next/image"
 const Services = () => {
   return (
-    <div className="w-full h-auto p-[2rem] bg-[#f5f8fd]" id="Services" >
+    <div className="w-full h-auto p-[0.2rem] md:p-[2rem] bg-[#f5f8fd]" id="Services" >
 
       <div className="text-3xl text-[#173b6c]  " >Services
       </div>
@@ -9,7 +9,7 @@ const Services = () => {
 
       </div>
 
-      <div className="grid grid-cols-3 " >
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 " >
         <div className="flex flex-col items-center justify-center h-auto p-3 mb-3 ">
           <div className=" mb-2 h-[18rem] w-[20rem] overflow-hidden   rounded-md bg-white ">
             <Image src="/web.gif" className="h-full " height={500} width={500} alt="" />
