@@ -18,16 +18,16 @@ const Home = () => {
   return (
     <div className="relative w-full xl:h-full xl:w-full ">
 
-<button className='fixed left-0 z-50 flex items-center justify-end visible xl:invisible md:right-hidden' onClick={() => setActive(!active)}>
+<button className='absolute top-0 z-50 flex visible xl:invisible md:right-hidden' onClick={() => setActive(!active)}>
 
 
           {
             active ? (
               <div> 
                     
-                  <nav className=" bg-[#273644] w-[100%] h-screen fixed   text-[white]" onClick={() => setActive(true)}  >
-                <p className='flex justify-end text-4xl hover:bg-red-600'> <ImCross /></p>  
-                <div className='grid h-full grid-rows-2 border'>
+                  <nav className=" bg-[#273644] w-[100%] h-screen fixed   text-[white]" onClick={() => setActive(false)}  >
+                <p className='flex justify-end text-4xl '> <ImCross className='w-fit hover:bg-red-600 ' /></p>  
+                <div className='grid h-full grid-rows-2   mt-[-4rem]'>
               <div className="flex flex-col items-center justify-center ">
               
                   <div className="md:h-[15rem] h-[7rem] w-[7rem] rounded-full overflow-hidden  mb-7 md:w-[15rem] bg-red  border-[#dad8d8] border-[7px] ">
@@ -48,7 +48,7 @@ const Home = () => {
                   </div>
               </div>
      
-                  <div className="grid w-full h-full grid-rows-5 text-2xl ">
+                  <div className="grid w-full  mt-[-4rem] h-full grid-rows-5 text-2xl ">
                       <Link href="/" >  <li className="flex items-center justify-center h-full gap-4 hover:bg-blue-600 "><AiFillHome /> Home</li></Link>
                       <Link href="#Aboutus" >    <li className="flex items-center justify-center h-full gap-4 hover:bg-blue-600 "> <MdOutlinePeopleAlt />About</li></Link>
                       <Link href="#Services" >   <li className="flex items-center justify-center h-full gap-4 hover:bg-blue-600 "><MdMiscellaneousServices />Services</li></Link>
@@ -71,7 +71,7 @@ const Home = () => {
 
               
             ) : (
-              <p className='flex justify-end text-4xl '><GiHamburgerMenu />  </p>
+              <p className='flex  text-4xl   hover:bg-[#d18f50] '><GiHamburgerMenu />  </p>
             )
           }
 
@@ -85,7 +85,7 @@ const Home = () => {
 
         <Image className="w-full h-full opacity-50 xl:h-screen sm:w-full xl:w-full" src="/bgs.jpg" width="500" height="500" alt="" />
      
-      <div className=" absolute  xl:left-[10rem] xl:top-[27rem] md:left-[5rem] top-0  md:top-[3rem] lg:top-[15rem] text-[1rem] md:text-4xl lg:text-5xl">
+      <div className=" absolute sm:top-[7rem] sm:left-10  xl:left-[10rem] xl:top-[27rem] md:left-[5rem] top-0  md:top-[3rem] lg:top-[15rem] text-[1rem] md:text-4xl lg:text-5xl">
 
         <strong className='text-[white]  text-[1.5rem] md:text-5xl lg:text-7xl ' >Diwakar Khatiwada</strong>
 
