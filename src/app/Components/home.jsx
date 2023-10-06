@@ -25,8 +25,8 @@ const Home = () => {
             active ? (
               <div> 
                     
-                  <nav className=" bg-[#273644] w-[100%] h-screen fixed   hover:bg-red-600 p-7  text-[white]" onClick={() => setActive(true)}  >
-                <p className='flex justify-end text-4xl'> <ImCross /></p>  
+                  <nav className=" bg-[#273644] w-[100%] h-screen fixed   text-[white]" onClick={() => setActive(true)}  >
+                <p className='flex justify-end text-4xl hover:bg-red-600'> <ImCross /></p>  
                 <div className='grid h-full grid-rows-2 border'>
               <div className="flex flex-col items-center justify-center ">
               
