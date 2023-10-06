@@ -26,7 +26,7 @@ const Home = () => {
               <div> 
                     
                   <nav className=" bg-[#273644] w-[100%] h-screen fixed   text-[white]" onClick={() => setActive(false)}  >
-                <p className='flex justify-end text-4xl '> <ImCross className='w-fit hover:bg-red-600 ' /></p>  
+                <p className='text-4xl '> <ImCross className=' hover:bg-red-600' /></p>  
                 <div className='grid h-full grid-rows-2   mt-[-4rem]'>
               <div className="flex flex-col items-center justify-center ">
               

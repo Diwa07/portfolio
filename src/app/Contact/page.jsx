@@ -3,7 +3,7 @@ import { FaLocationDot, FaLinkedin } from 'react-icons/fa6';
 
 const Contact = () => {
   return (
-    <div className="w-full  p-4 border border-[red] sm:p-[2rem] bg-[#f5f8fd]" id="Contact">
+    <div className="w-full  p-4 border sm:p-[2rem] bg-[#f5f8fd]" id="Contact">
       <div className="text-xl sm:text-3xl md:text-4xl text-[#173b6c]">Contact</div>
       <div className="h-1 w-16 sm:w-[7rem] mt-2 mb-5 bg-[#149ddd]"></div>
 
