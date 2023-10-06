@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Aboutus = () => {
   return (
-    <main className="w-screen p-0 bg-white xl:w-full md:p-8" id="Aboutus">
+    <main className="w-screen p-2 bg-white xl:w-full md:p-8" id="Aboutus">
       <div className="p-2 md:p-4">
         <div>
           <div className="text-xl md:text-3xl text-[#173b6c]">

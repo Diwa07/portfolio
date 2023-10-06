@@ -11,7 +11,7 @@ const Home = () => {
   const [active, setActive] = useState(false);
 
   return (
-    <div className="w-screen xl:h-full xl:w-full ">
+    <div className="w-full xl:h-full xl:w-full ">
 
 
       <title>My portfolio</title>

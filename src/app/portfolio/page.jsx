@@ -18,7 +18,7 @@ const Portfolio = () => {
           modules={[Navigation, Pagination, Autoplay, Scrollbar, A11y]}
           spaceBetween={5}
           slidesPerView={1}
-          navigation
+       
           autoplay={{ delay: 3000 }}
           loop={true}
           pagination={{ clickable: true }}
