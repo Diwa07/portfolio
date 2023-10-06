@@ -12,7 +12,7 @@ const Header = () => {
     return (
         <nav className=" bg-[#273644] w-[23%] h-screen fixed  invisible xl:visible grid grid-rows-2 text-[white]" >
 
-            <div className="flex flex-col items-center justify-center ">
+            <div className="flex flex-col items-center justify-center p-5 ">
                 <div className="h-[15rem] rounded-full overflow-hidden  w-[15rem] bg-red  border-[#dad8d8] border-[7px] ">
                     <Image src="/me.jpeg" className="w-full h-full " height={500} width={500} alt="" />
 

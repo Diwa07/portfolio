@@ -8,7 +8,7 @@ const Aboutus = () => {
           <div className="text-xl md:text-3xl text-[#173b6c]">
             About
             <div className="h-1 w-16 md:w-[7rem] mt-2 mb-2 bg-[#149ddd]"></div>
-            <p className="text-md w-screen sm:w-full md:text-lg text-[#292828]">
+            <p className="text-md w-full sm:w-full md:text-lg text-[#292828]">
               Looking forward to an opportunity in an atmosphere where I can make a difference, and not just be another payroll figure, with an ambitious pace and desire to scale the peaks of professional excellence. I am adaptable to any challenges and will be thrilled to work.
             </p>
           </div>
