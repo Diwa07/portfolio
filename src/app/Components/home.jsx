@@ -17,6 +17,7 @@ const Home = () => {
 
   return (
     <div className="relative w-full xl:h-full xl:w-full ">
+      
 
 <button className='absolute top-0 z-50 flex visible xl:invisible md:right-hidden' onClick={() => setActive(!active)}>
 
@@ -71,7 +72,7 @@ const Home = () => {
 
               
             ) : (
-              <p className='flex  text-4xl   hover:bg-[#d18f50] '><GiHamburgerMenu />  </p>
+              <p className='flex  text-4xl ml-1  text-[#2d4175] '><GiHamburgerMenu />  </p>
             )
           }
 
@@ -85,11 +86,11 @@ const Home = () => {
 
         <Image className="w-full h-full opacity-50 xl:h-screen sm:w-full xl:w-full" src="/bgs.jpg" width="500" height="500" alt="" />
      
-      <div className=" absolute sm:top-[7rem] sm:left-10  xl:left-[10rem] xl:top-[27rem] md:left-[5rem] top-0  md:top-[3rem] lg:top-[15rem] text-[1rem] md:text-4xl lg:text-5xl">
+      <div className=" absolute sm:top-[7rem] sm:left-10   xl:left-[10rem] xl:top-[27rem] md:left-[5rem] top-[6rem] left-[4rem] md:top-[3rem] lg:top-[15rem] text-[1rem] md:text-4xl lg:text-5xl">
 
         <strong className='text-[white]  text-[1.5rem] md:text-5xl lg:text-7xl ' >Diwakar Khatiwada</strong>
 
-        <p className='text-[#132043] mt-4 font-medium '> &nbsp; &nbsp; I'M  &nbsp;
+        <p className='text-[#132043] mt-1 md:mt-4 font-medium '> &nbsp; &nbsp; I'M  &nbsp;
 
           <span className='text-[#132043] underline font-bold ' >
             <Typewriter
