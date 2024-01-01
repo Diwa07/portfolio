@@ -27,13 +27,23 @@ const Portfolio = () => {
           onSlideChange={() => console.log('slide change')}
         >
               <SwiperSlide>
-            <Image className="w-full h-full" src="/aa.png" width={500} height={500} alt="" />
+            <Image className="w-full h-full" src="/login.PNG" width={500} height={500} alt="" />
           </SwiperSlide>
           <SwiperSlide>
-            <Image className="w-full h-full" src="/bb.png" width={500} height={500} alt="" />
+            <Image className="w-full h-full" src="/register.PNG" width={500} height={500} alt="" />
+          </SwiperSlide>
+  
+          <SwiperSlide>
+            <Image className="w-full h-full" src="/message.PNG" width={500} height={500} alt="" />
           </SwiperSlide>
           <SwiperSlide>
-            <Image className="w-full h-full" src="/a.png" width={500} height={500} alt="" />
+            <Image className="w-full h-full" src="/logout.PNG" width={500} height={500} alt="" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Image className="w-full h-full" src="/eg2.PNG" width={500} height={500} alt="" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Image className="w-full h-full" src="/eg4.png" width={500} height={500} alt="" />
           </SwiperSlide>
           <SwiperSlide>
             <Image className="w-full h-full" src="/b.png" width={500} height={500} alt="" />
