@@ -17,7 +17,8 @@ const Home = () => {
 
   return (
     <div className="relative w-full xl:h-full xl:w-full ">
-      
+
+
 
 <button className='absolute top-0 z-50 flex visible xl:invisible md:right-hidden' onClick={() => setActive(!active)}>
 

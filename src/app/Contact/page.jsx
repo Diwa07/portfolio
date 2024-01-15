@@ -1,9 +1,42 @@
+"use client"
 import { MdMarkEmailRead } from 'react-icons/md';
+import {db} from '../../firebase' ;
+import {collection ,addDoc }  from 'firebase/firestore' ;
+import { useState } from 'react';
 import { FaLocationDot, FaLinkedin } from 'react-icons/fa6';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Contact = () => {
+
+  const [name, setname] = useState();
+    const [email, setemail] = useState();
+    const [message, setmessage] = useState();
+
+  
+    const dbref = collection(db, 'contactFromPortfolio')
+
+    const send = async() => {
+
+      try{
+ await addDoc( dbref, {
+  name: name,
+  email: email,
+  message:message
+});
+toast.success("data added sucessfully!");
+
+
+      }
+      catch (error){toast.error(error);
+
+      }
+   
+  }
+
   return (
     <div className="w-full  p-4 border sm:p-[2rem] bg-[#f5f8fd]" id="Contact">
+       <ToastContainer />
       <div className="text-xl sm:text-3xl md:text-4xl text-[#173b6c]">Contact</div>
       <div className="h-1 w-16 sm:w-[7rem] mt-2 mb-5 bg-[#149ddd]"></div>
 
@@ -32,8 +65,8 @@ const Contact = () => {
               <label htmlFor="name" className="block text-gray-600">Name</label>
               <input
                 type="text"
-                id="name"
-                name="name"
+                value={name}
+                onChange={(e) => setname(e.target.value)}
                 className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500"
                 required
               />
@@ -41,9 +74,11 @@ const Contact = () => {
             <div className="mb-4">
               <label htmlFor="email" className="block text-gray-600">Email</label>
               <input
+                 onChange={(e) => setemail(e.target.value)}
+               
+                value={email}
                 type="email"
-                id="email"
-                name="email"
+           
                 className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500"
                 required
               />
@@ -51,8 +86,9 @@ const Contact = () => {
             <div className="mb-4">
               <label htmlFor="message" className="block text-gray-600">Message</label>
               <textarea
-                id="message"
-                name="message"
+                  onChange={(e) => setmessage(e.target.value)}
+               
+                  value={message}
                 className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500"
                 rows="4"
                 required
@@ -60,7 +96,8 @@ const Contact = () => {
             </div>
             <div className="text-center">
               <button
-                type="submit"
+               
+                onClick={send}
                 className="px-6 py-3 text-white bg-blue-500 rounded-lg hover:bg-blue-600 focus:outline-none"
               >
                 Send Message
