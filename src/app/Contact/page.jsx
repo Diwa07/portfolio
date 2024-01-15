@@ -28,7 +28,7 @@ toast.success("data added sucessfully!");
 
 
       }
-      catch (error){toast.error(error);
+      catch (error){alert(error)
 
       }
    
