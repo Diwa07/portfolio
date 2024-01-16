@@ -29,11 +29,16 @@ const Contact = () => {
           'Content-Type': 'application/json'
         }
       });
+      setFormData({
+        email: '',
+        name: '',
+        message: ''
+      });
       toast.success("Thank you for reaching out. we look forward to contacting you very soon ");
-      // Handle success or other logic here
+
     } catch (error) {
     toast.error("something went wrong")
-      // Handle error logic here
+     
     }
   };
 
