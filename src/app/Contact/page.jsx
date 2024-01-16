@@ -71,7 +71,7 @@ const Contact = () => {
         <div className="p-4 bg-white rounded-lg shadow-lg sm:p-6">
           <h2 className="mb-2 text-2xl font-semibold sm:text-3xl">Contact Us</h2>
           <p className="mb-4 text-base sm:text-lg">Ready to Work Together? Build a project with us!</p>
-          <form onSubmit={handleSubmit}>
+          <form className='text-[black]' onSubmit={handleSubmit}>
             <div className="mb-4">
               <label htmlFor="name" className="block text-gray-600">Name</label>
               <input
