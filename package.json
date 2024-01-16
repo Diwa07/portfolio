@@ -11,6 +11,7 @@
   "dependencies": {
     "@bradgarropy/next-google-analytics": "^1.0.2",
     "@react-icons/all-files": "^4.1.0",
+    "axios": "^1.6.5",
     "firebase": "^10.7.1",
     "next": "^14.0.4",
     "react": "latest",

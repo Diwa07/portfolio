@@ -1,40 +1,46 @@
 "use client"
 import { MdMarkEmailRead } from 'react-icons/md';
-import {db} from '../../firebase' ;
-import {collection ,addDoc }  from 'firebase/firestore' ;
+import axios from 'axios';
 import { useState } from 'react';
 import { FaLocationDot, FaLinkedin } from 'react-icons/fa6';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    email: '',
+    name: '',
+    message: ''
+  });
 
-  const [name, setname] = useState();
-    const [email, setemail] = useState();
-    const [message, setmessage] = useState();
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await axios.post('https://portfolio-ea33c-default-rtdb.asia-southeast1.firebasedatabase.app/try.json', JSON.stringify(formData), {
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+      toast.success("Thank you for reaching out. we look forward to contacting you very soon ");
+      // Handle success or other logic here
+    } catch (error) {
+    toast.error("something went wrong")
+      // Handle error logic here
+    }
+  };
+
 
   
-    const dbref = collection(db, 'contactFromPortfolio')
-
-    const send = async() => {
-
-      try{
- await addDoc( dbref, {
-  name: name,
-  email: email,
-  message:message
-});
-toast.success("data added sucessfully!");
-
-
-      }
-      catch (error){alert(error)
-
-      }
-   
-  }
-
-  return (
+    
+ return (
     <div className="w-full  p-4 border sm:p-[2rem] bg-[#f5f8fd]" id="Contact">
        <ToastContainer />
       <div className="text-xl sm:text-3xl md:text-4xl text-[#173b6c]">Contact</div>
@@ -60,13 +66,13 @@ toast.success("data added sucessfully!");
         <div className="p-4 bg-white rounded-lg shadow-lg sm:p-6">
           <h2 className="mb-2 text-2xl font-semibold sm:text-3xl">Contact Us</h2>
           <p className="mb-4 text-base sm:text-lg">Ready to Work Together? Build a project with us!</p>
-          <form>
+          <form onSubmit={handleSubmit}>
             <div className="mb-4">
               <label htmlFor="name" className="block text-gray-600">Name</label>
               <input
                 type="text"
-                value={name}
-                onChange={(e) => setname(e.target.value)}
+                name='name'
+                value={formData.name} onChange={handleChange}
                 className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500"
                 required
               />
@@ -74,11 +80,9 @@ toast.success("data added sucessfully!");
             <div className="mb-4">
               <label htmlFor="email" className="block text-gray-600">Email</label>
               <input
-                 onChange={(e) => setemail(e.target.value)}
-               
-                value={email}
+                value={formData.email} onChange={handleChange}
                 type="email"
-           
+           name="email"
                 className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500"
                 required
               />
@@ -86,9 +90,8 @@ toast.success("data added sucessfully!");
             <div className="mb-4">
               <label htmlFor="message" className="block text-gray-600">Message</label>
               <textarea
-                  onChange={(e) => setmessage(e.target.value)}
-               
-                  value={message}
+                  name="message"
+                  value={formData.message} onChange={handleChange}
                 className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500"
                 rows="4"
                 required
@@ -97,7 +100,7 @@ toast.success("data added sucessfully!");
             <div className="text-center">
               <button
                
-                onClick={send}
+               type="submit"
                 className="px-6 py-3 text-white bg-blue-500 rounded-lg hover:bg-blue-600 focus:outline-none"
               >
                 Send Message
