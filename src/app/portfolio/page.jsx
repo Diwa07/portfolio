@@ -27,6 +27,21 @@ const Portfolio = () => {
           onSlideChange={() => console.log('slide change')}
         >
               <SwiperSlide>
+              <SwiperSlide>
+            <Image className="w-full h-full" src="/a1.png" width={500} height={500} alt="" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Image className="w-full h-full" src="/b1.png" width={500} height={500} alt="" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Image className="w-full h-full" src="/c1.png" width={500} height={500} alt="" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Image className="w-full h-full" src="/d1.png" width={500} height={500} alt="" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Image className="w-full h-full" src="/e1.png" width={500} height={500} alt="" />
+          </SwiperSlide>
             <Image className="w-full h-full" src="/login.PNG" width={500} height={500} alt="" />
           </SwiperSlide>
           <SwiperSlide>
